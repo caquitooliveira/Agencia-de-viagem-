@@ -1,0 +1,264 @@
+body {
+  margin: 0;
+  font-family: 'Raleway', sans-serif;
+  background-color: #f2f2f2;
+}
+
+.topo {
+  background: #663399;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.topo-container {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  max-width: 350px;
+  width: 100%;
+}
+
+
+.logo {
+  width: 30px;
+  margin-right: 10px;
+}
+
+.topo h1 {
+  font-size: 1.2rem;
+  color: white;
+  margin: 0;
+}
+
+.formulario-bg {
+  background: url('assets/imagens/bahia.jpg') center/cover no-repeat;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.formulario {
+  background: white;
+  padding: 0 0 30px;
+  border-radius: 5px;
+  max-width: 700px;
+  width: 100%;
+  box-shadow: 0 0 10px #ccc;
+  overflow: hidden;
+}
+
+.faixa-roxa {
+  background: #663399;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+}
+
+.faixa-roxa img {
+  width: 25px;
+  margin-right: 10px;
+}
+
+.faixa-roxa h2 {
+  font-size: 1.2em;
+  margin: 0;
+}
+
+fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+}
+
+input, select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.datas {
+  display: flex;
+  gap: 10px;
+}
+
+.grupo {
+  margin-top: 10px;
+}
+
+button {
+  background: #663399;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #5a2d87;
+}
+
+.ofertas, .natureza {
+  padding: 40px 20px;
+  background: #fff;
+  text-align: center;
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.card img {
+  width: 100%;
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+.card:hover img {
+  transform: scale(1.1);
+}
+
+.card .descricao {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  width: 100%;
+  padding: 10px;
+  font-size: 0.9rem;
+  text-align: center;
+  transition: opacity 0.3s;
+  opacity: 0;
+}
+
+.card:hover .descricao {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .topo-container {
+    max-width: 280px;
+  }
+
+  .datas {
+    flex-direction: column;
+  }
+
+  .formulario {
+    margin: 0 10px;
+  }
+
+  .faixa-roxa h2 {
+    font-size: 1em;
+  }
+}
+
+footer {
+  background: #663399;
+  color: white;
+  display: flex;
+  justify-content: center; /* Centraliza os blocos horizontalmente */
+  flex-wrap: wrap;
+  padding: 30px 20px;
+  gap: 20px;
+  text-align: center; /* Centraliza o texto dentro do footer */
+}
+
+footer .contato,
+footer .redes {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza conteúdo dentro de cada bloco */
+}
+
+footer h3 {
+  margin-bottom: 15px;
+}
+
+footer p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 8px 0;
+  font-size: 0.95rem;
+  justify-content: center; /* Centraliza o conteúdo do parágrafo */
+}
+
+footer img {
+  width: 20px;
+  height: auto;
+}
+
+
+.destaques {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin: 60px auto;
+  max-width: 650px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  flex-wrap: nowrap; /* ← NÃO quebra em telas grandes */
+}
+
+.card.destaque {
+  width: 450px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.card.destaque img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card.destaque:hover {
+  transform: scale(1.05);
+}
+
+.card.destaque .descricao {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+/* 🔄 Só em telas menores que 900px as imagens quebram */
+@media (max-width: 900px) {
+  .destaques {
+    flex-wrap: wrap;        /* ← agora SIM pode quebrar */
+  }
+
+  .card.destaque {
+    width: 100%;            /* ← ocupa toda a largura da tela */
+  }
+}
+
+
